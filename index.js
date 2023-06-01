@@ -7,7 +7,7 @@ app.get("/userlist",function(req,res){
             name: "koushik"
         },
         {
-            name: "babu"
+            name: "babu1"
         },
         {
             name: "jony"
