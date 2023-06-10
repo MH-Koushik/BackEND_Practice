@@ -5,9 +5,24 @@ app.use(cors())
 app.use(express.json())
 
 app.post("/userlist",function(req,res){
-   console.log(req.body)
-   res.send(req.body)
+   let {fname,lname,email,password}=req.body;
+   if(!fname){
+       res.send("First Name Empty")
+   }
+   if(!lname){
+    res.send("Last Name Empty")
+    }
+
+    if(!email){
+        res.send("Mail Empty")
+    }
+
+    if(!password){
+        res.send("Password Empty")
+    }   
 })
+  
+
 
 app.listen(8000,function(){
     console.log("Server running")
