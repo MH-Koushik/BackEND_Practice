@@ -1,19 +1,12 @@
 const express=require("express")
+var cors = require('cors')
 const app=express();
+app.use(cors())
+app.use(express.json())
 
-app.get("/userlist",function(req,res){
-    let arr=[
-        {
-            name: "koushik"
-        },
-        {
-            name: "babu1"
-        },
-        {
-            name: "jony"
-        }
-    ]
-    res.send(arr)
+app.post("/userlist",function(req,res){
+   console.log(req.body)
+   
 })
 
 app.listen(8000,function(){
